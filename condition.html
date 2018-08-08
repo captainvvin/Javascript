@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*  ※ about 'if'  */
+		if(true) {
+			alert('result : true');
+		} 
+
+		if(false) {
+			alert('result : true');
+		} // If the contents in parenthesis of the statement are true, the contents of the block enclosed in brackets are executed.
+
+
+		if(true) {
+			alert(1);
+			alert(2);
+			alert(3);
+			alert(4);
+		}
+		alert(5);
+		// when this web page is opened, alert window 1,2,3,4,5 is will open.  
+
+	/*  ※ about 'else'  */
+		if(true){
+			alert(1);
+		} else {
+			alert(2);
+		} // when 'if' syntax condition fail to satisfy 'true', 'else' syntax is execute
+
+		if(false) {
+			alert(1);
+		} else if(false) {
+			alert(2);
+		} else if(false) {
+			alert(3);
+		} else (true) {
+			alert(4);
+		} // 'else if' further disaggregates the conditions. Use when conditions are not defined by the if,else statement. It is a logic that can be used more intelligently in complex situations.
+	/*  ※ prompt --> 'scanf' in 'c-language'  */
+		var id = prompt('What is your ID?'); // you can get value from the user.
+		var password = prompt('what is your password?')
+		if(id == 'captainvin'){
+			alert('ID is correct!');
+			if(password == 'Eat&Trip.0913') {
+				alert('login success! Hello'+id+'!');
+			} else {
+				alert('login fail...');
+			}
+		} else {
+			alert('id is incorrect!');
+		}
+	/*  ※ logical operator (&& or ||)  */
+		if(true && true) {
+			alert('true!');
+		}
+		if(true && false) {
+			alert('false');
+		}
+		if(false && false) {
+			alert('false');
+		}                              // && operator is 'and' gate
+		if(true || true) {
+			alert('true!');
+		}
+		if(true || false) {
+			alert('true');
+		}
+		if(false || false) {
+			alert('false');            // || operator is 'or' gate
+		}
+
+		// So we can change the login logic that we made
+		var id = prompt('What is your ID?'); // you can get value from the user.
+		var password = prompt('what is your password?')
+		if(id == 'captainvin' && password === 'Eat&Trip.0913'){
+			alert('log in success! welcome '+id);
+		} else {
+			alert('log in fail. retry.(if you fail more than 5 times your account will be suspended)');
+		}
+
+	/*  ※ This can be 'boolean!'  */
+		alert('https://opentutorials.org/course/743/4724');
+	</script>
+</body>
+</html>

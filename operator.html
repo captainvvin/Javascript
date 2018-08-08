@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	a = 1; // a is variable, 1 is value
+	/* equal operator (==) */ // It doesn't care datatype only compare value
+	alert(1==1); // true
+	alert(1==2); // false
+	alert("one"=="one"); // true
+	alert("one"=="two"); // false
+
+	/* strict equal operator (===) */ // Compare value and datatype at the same time
+	alert(1=="1"); // true
+	alert(1==="1"); // false
+	alert(null == undefined); // (true) 'Null' is an explicit indication of no value. Simply 'null' is no toilet paper in the holder (even papertube).
+	alert(null === undefined); // (false) Let's just think 'undefined' is not worth it. Simply 'undefined' is only papertube in the holder.
+	alert(0 === -0); // true
+	alert(NaN === NaN); // (false) NaN is can't be calculate
+
+	/* compare operator (!=,!==,>,<) */
+	alert(1!=2); // true
+	alert(1!=1): // false
+	alert("one"!="two"); // true
+	alert("one"!="two"); // false
+	// '!=='' is oposite return of '===' value
+	alert(10>20); /* false */  alert(10>=20); /* false */
+	alert(10>1); /* true */    alert(10>=1); /* true */
+	alert(10>10); /* false */  alert(10>=10); /* true */
+</script>
+</body>
+</html>
