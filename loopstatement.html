@@ -5,7 +5,48 @@
 </head>
 <body>
 	<script type="text/javascript">
-		document.write("Coding everybody <br />");
+		/* ※ 'while' loop statement  */
+
+		/* while(true) {
+		document.write("Coding everybody <br />"); // The grammar of text on the web page
+		} */ // --> this task must will not be end. It can damage on your computer's memory
+
+		var i = 0;
+		while(i <= 10) { // --> this loop will execute 11 times
+			document.write('coding everybody<br />');
+			i = i+1;
+		}
+
+		/*  ※ 'for' loop statement  */
+
+		for(var j=0; j<10; j++) { // same as 'c-language', j++ == j = j+1
+			document.write('coding everybody<br />');
+		}
+
+		// So, why we use 'loop' statement? : first I suppose you have to do a million operations. If you don't know about 'loop' statement you make a execute code million time. But if you know about 'loop' statement you just set loop's condition and, you just type the '1' execute statement code in the loop!
+
+		/*  ※ loop statement control  */
+
+		for(var k=0; k<10; k++) {
+			if(k === 5) {
+				break; // escape from loop. you quit the loop forever
+			}
+			document.write('coding everybody<br />');
+		}
+
+		for(var l=0; l<10; l++) {
+			if(l === 5) {
+				continue; // escape loop only one time. simply let's think 'jump'. I think it's good example
+			}
+		}
+
+		/*  ※ loop in the loop  */
+		
+		for(var m=0; m<10; m++) {
+			for(var n=0; n<10; n++) {
+				document.write('coding everybody'+m+n+'<br />'); // originally var m & n are not 'string' datatype. but when if a 'string' data type is in front of any integer value, JavaScript automatically converts variable m into a string.
+			}
+		}
 	</script>
 </body>
 </html>

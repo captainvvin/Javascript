@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	A function is allows a logic to be re-execute, increasing the reuse of codes.
+	<script type="text/javascript">
+		/*  ※ architecture of Javascript's 'function'1  */
+		function numbering() {
+			var i = 0;
+			while(i<10) {
+				document.write(i+"<br />");
+			}
+		}
+		numbering();numbering();numbering();numbering(); // 'i' will be written on web page 4*10 times --> this is good for maintanance
+
+		/*  ※ architecture of Javascript's 'function'2 (and how to make output in function)  */
+		function get_member1() {
+			return 'kim'; // only string 'kim' will be return
+			return 'jung';
+			return 'bin';
+		}
+
+		/*  ※ how to input value in function?  */
+		function get_argument1(arg){
+			return arg*1000;
+		}
+
+		function get_argument2(arg1,arg2){
+			return arg1+2*arg2;
+		}
+
+		alert(get_argument1(1)); // 1000 will be return.
+		alert(get_argument1(2)); // 2000 will be return.
+		alert(get_argument2(10,20)); // 50 will be return.
+		alert(get_argument2(30,50)); // 130 will be return.
+
+		/*  ※ various method define function  */
+		twice = function() {
+			document.write('nayeon, jeongyeon, momo, sana, jihyo, mina, dahyeon, chaeyoung, tzuyu : CHEER_UP');
+		}
+
+		// anonymous function
+		(function() {
+			document.write('wendy, irene, seulgi, joy, yeri : POWER_UP');
+		})(); // this function doesn't have a name and execute immediately
+	</script>
+</body>
+</html>
