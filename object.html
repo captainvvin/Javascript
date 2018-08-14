@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul>
+		<script type="text/javascript">
+			var grades1 = {'kim':10, 'jung':20, 'bin':30} // 'kim','jung','bin' : Key, 10,20,30: value
+			/* ※ another method to make object 1 */
+			var grades2 = {};
+			grades2['kim'] = 10; grades2['jung'] = 20; grades2['bin'] = 30;
+			/* ※ another method to make object 2 */
+			var grades3 = new Object();
+			grades3['kim'] = 10; grades3['jung'] = 20; grades3['bin'] = 30;
+
+			alert(grades1['kim']); /* or */ alert(grades1.k8805) /* or */ alert(grades1['k'+'i'+'m']);
+
+			/* ※ 'for' statement that used in object */
+			for(var key in grades1) {  // 'key' is can be rename
+				document.write("<li>Key : "+key+"value : "+grade1[key]+"</li>");
+			}
+
+			/* ※ It is also possible for objects to have objects. */
+			var obj_list = {
+				'list' : {'kim':10, 'jung':20, 'bin':30}
+				'show' : function() { // function can be saved as object!
+					alert('Hello world!');
+				}
+				'promise' : function() {
+					for(var name in this.list) {
+						console.log(name, this.list[name]);
+					} // 'this' refers to the object to which the function belongs.
+				}
+			}
+			alert(obj_list['list']['kim']);
+			alert(obj_list['show']());
+			alert(obj_list.promise())
+		</script>
+	</ul>
+</body>
+</html>

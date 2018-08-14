@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var member = ['null', 'ein', 'zwei', 'drei', 'vier', 'funf']  // we called each of things in the array is 'element'
+
+		// ※ How to express each of element?
+		member[0]; member[1], member[2], member[3], member[4], member[5] // we called number that between square brackets as 'index'
+
+		function get_member1() {
+			return 'null';
+		}
+		document.write(get_member1());
+
+		function get_member2() {
+			return 'ein';
+		}
+		document.write(get_member2());  // function has variable input and only one output value...
+
+		/* but we could make variable output as array */
+
+		function get_members() {
+			return ['null','ein','zwei','drei','vier','funf'];
+		}
+
+		var members = get_members;
+		document.write(members[0]); // like this
+
+		for (i=0; i<members.length; i++) {
+			document.write(members[i].toUpperCase()+"<br />")
+		} // value 'i' is use for memnbers array's index value
+
+		/* ※ Various method for managing the array */
+		var KOR_num = ['ill','yee','sam','sa','oh'];
+		var KOR_num0 = ['ill','yee','sam','sa','oh'];
+		KOR_num.unshift('young'); // '.unshift' append element at array in the head
+		KOR_num.push('yook'); // '.push' append element at array in the tail
+		KOR_num1 = KOR_num.concat(['chil','pal']); // '.concat' is a command that returns the previous factor by adding the latter element.
+		/*  about '.splice'
+			array.splice(index, howmany, element1,...,elementN); 
+			index : (essential, number datatype) Index that points to a specific location to add to the array 
+			howmany : (essential, number datatype) Number of element that delete from index
+			element1~N : (non-essential, {number, string} datatype) element that append between index ~ index+howmay */
+		weird_KOR_num = KOR_num.splice(2,0,"I'm","GROOT!"); // = ['young', ill','yee','I'm','GROOT!','sam','sa','oh','yook']
+		min_KOR_num = KOR_num0.splice(4,3); // = ['young', 'ill', 'yee', 'sam']
+		alert(KOR_num[0]); // = alert('young');
+		alert(KOR_num[6]); // = alert('yook');
+		alert(KOR_num1);
+		KOR_num.shift(); // = popout head element
+		KOR_num.pop(); // = popout tail element
+
+		var list = ['c','e','a','b','d'];
+		list.sort(); // sorting data in alphabetical order
+		list.reverse(); // in reverse order
+	</script>
+</body>
+</html>
